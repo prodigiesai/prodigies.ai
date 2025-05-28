@@ -1,0 +1,8 @@
+2024-12-03 14:13:38 - coinbase.RESTClient - ERROR - HTTP Error: 400 Client Error: Bad Request {"error":"INVALID_ARGUMENT","error_details":"ProductID is invalid","message":"ProductID is invalid"}
+------------- Crypto Bot V1 --------------------
+Trading Pair: ETH,Ethereum
+Hashtags: ['']
+Start Time: 2024-12-03 14:13:38
+End Time: 2024-12-03 14:28:38
+Error fetching or processing data: 400 Client Error: Bad Request {"error":"INVALID_ARGUMENT","error_details":"ProductID is invalid","message":"ProductID is invalid"}
+Failed to fetch data. Exiting...

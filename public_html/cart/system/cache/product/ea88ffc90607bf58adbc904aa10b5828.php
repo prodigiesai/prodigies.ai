@@ -1,0 +1,3 @@
+<?php die('Restricted Access!'); ?>#AbanteCart#a:13:{s:11:"category_id";s:2:"52";s:9:"parent_id";s:1:"0";s:10:"sort_order";s:2:"98";s:6:"status";s:1:"1";s:10:"date_added";s:19:"2025-01-08 14:59:51";s:13:"date_modified";s:19:"2025-01-08 14:59:51";s:11:"language_id";s:1:"1";s:4:"name";s:9:"Hair Care";s:13:"meta_keywords";s:0:"";s:16:"meta_description";s:0:"";s:11:"description";s:65:"&lt;p&gt;
+	The widest range of premium hair products&lt;/p&gt;
+";s:8:"store_id";s:1:"0";s:14:"products_count";s:1:"0";}

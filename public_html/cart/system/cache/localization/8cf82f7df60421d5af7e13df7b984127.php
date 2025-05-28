@@ -1,0 +1,1 @@
+<?php die('Restricted Access!'); ?>#AbanteCart#a:6:{s:12:"novator_name";s:7:"Novator";s:15:"text_categories";s:10:"Categories";s:12:"text_ratings";s:7:"Ratings";s:11:"text_brands";s:6:"Brands";s:13:"text_per_page";s:8:"Per Page";s:17:"percentage_review";s:32:"of buyers have recommended this.";}

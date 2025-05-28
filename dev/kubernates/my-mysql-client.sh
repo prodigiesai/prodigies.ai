@@ -1,0 +1,1 @@
+kubectl run my-mysql-client --rm --tty -i --restart='Never' --image docker.io/bitnami/mysql:8.4.3-debian-12-r0 --namespace mysql --env MYSQL_ROOT_PASSWORD=$MYSQL_ROOT_PASSWORD --command -- bash

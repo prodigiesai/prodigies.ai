@@ -1,0 +1,1 @@
+<?php die('Restricted Access!'); ?>#AbanteCart#a:1:{i:0;a:3:{s:15:"manufacturer_id";s:2:"15";s:4:"name";s:8:"Lancôme";s:13:"product_count";s:1:"2";}}

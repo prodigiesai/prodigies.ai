@@ -1,0 +1,42 @@
+{
+  "name": "ph-7/passcode-password-generator",
+  "description": "A simple way to generate random passcodes and passwords.",
+  "keywords": [
+    "passcode",
+    "password",
+    "generator",
+    "passcode generator",
+    "password generator",
+    "digit",
+    "digits",
+    "security",
+    "cryptography",
+    "cryptographically secure"
+  ],
+  "homepage": "https://pierrehenry.be",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Pierre-Henry Soria",
+      "email": "hi@ph7.me",
+      "role": "Cool&Passionate Software Developer",
+      "homepage": "https://ph7.me"
+    }
+  ],
+  "minimum-stability": "stable",
+  "autoload": {
+    "psr-4": {
+      "PH7\\Generator\\": "src/Generator"
+    }
+  },
+  "require": {
+    "php": ">=7.3.0"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^9.5"
+  },
+  "scripts": {
+    "test": "vendor/bin/phpunit"
+  }
+}

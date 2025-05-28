@@ -1,0 +1,47 @@
+[15-Jan-2025 17:43:21 America/Chicago] PHP Warning:  include_once(./vendor/autoload.php): Failed to open stream: No such file or directory in /home2/vivhjgte/public_html/cats/lib/TemplateUtility.php on line 38
+[15-Jan-2025 17:43:21 America/Chicago] PHP Warning:  include_once(): Failed opening './vendor/autoload.php' for inclusion (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home2/vivhjgte/public_html/cats/lib/TemplateUtility.php on line 38
+[15-Jan-2025 17:43:21 America/Chicago] PHP Fatal error:  Array and string offset access syntax with curly braces is no longer supported in /home2/vivhjgte/public_html/cats/lib/CATSUtility.php on line 108
+[15-Jan-2025 17:43:33 America/Chicago] PHP Fatal error:  Array and string offset access syntax with curly braces is no longer supported in /home2/vivhjgte/public_html/cats/lib/CATSUtility.php on line 108
+[15-Jan-2025 17:48:18 America/Chicago] PHP Warning:  include_once(./vendor/autoload.php): Failed to open stream: No such file or directory in /home2/vivhjgte/public_html/cats/lib/TemplateUtility.php on line 38
+[15-Jan-2025 17:48:18 America/Chicago] PHP Warning:  include_once(): Failed opening './vendor/autoload.php' for inclusion (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home2/vivhjgte/public_html/cats/lib/TemplateUtility.php on line 38
+[15-Jan-2025 17:48:18 America/Chicago] PHP Fatal error:  Array and string offset access syntax with curly braces is no longer supported in /home2/vivhjgte/public_html/cats/lib/CATSUtility.php on line 108
+[15-Jan-2025 17:48:20 America/Chicago] PHP Fatal error:  Array and string offset access syntax with curly braces is no longer supported in /home2/vivhjgte/public_html/cats/lib/CATSUtility.php on line 108
+[15-Jan-2025 17:52:40 America/Chicago] PHP Warning:  include_once(./vendor/autoload.php): Failed to open stream: No such file or directory in /home2/vivhjgte/public_html/cats/lib/TemplateUtility.php on line 38
+[15-Jan-2025 17:52:40 America/Chicago] PHP Warning:  include_once(): Failed opening './vendor/autoload.php' for inclusion (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home2/vivhjgte/public_html/cats/lib/TemplateUtility.php on line 38
+[15-Jan-2025 17:52:40 America/Chicago] PHP Fatal error:  Array and string offset access syntax with curly braces is no longer supported in /home2/vivhjgte/public_html/cats/lib/CATSUtility.php on line 108
+[15-Jan-2025 17:53:07 America/Chicago] PHP Fatal error:  Uncaught Error: Call to undefined function get_magic_quotes_runtime() in /home2/vivhjgte/public_html/cats/lib/InstallationTests.php:185
+Stack trace:
+#0 /home2/vivhjgte/public_html/cats/lib/InstallationTests.php(53): InstallationTests::checkMagicQuotes()
+#1 /home2/vivhjgte/public_html/cats/installtest.php(156): InstallationTests::runCoreTests()
+#2 {main}
+  thrown in /home2/vivhjgte/public_html/cats/lib/InstallationTests.php on line 185
+[15-Jan-2025 17:53:21 America/Chicago] PHP Warning:  include_once(./vendor/autoload.php): Failed to open stream: No such file or directory in /home2/vivhjgte/public_html/cats/lib/TemplateUtility.php on line 38
+[15-Jan-2025 17:53:21 America/Chicago] PHP Warning:  include_once(): Failed opening './vendor/autoload.php' for inclusion (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home2/vivhjgte/public_html/cats/lib/TemplateUtility.php on line 38
+[15-Jan-2025 17:53:21 America/Chicago] PHP Fatal error:  Array and string offset access syntax with curly braces is no longer supported in /home2/vivhjgte/public_html/cats/lib/CATSUtility.php on line 108
+[15-Jan-2025 17:53:27 America/Chicago] PHP Fatal error:  Array and string offset access syntax with curly braces is no longer supported in /home2/vivhjgte/public_html/cats/lib/CATSUtility.php on line 108
+[15-Jan-2025 17:53:45 America/Chicago] PHP Fatal error:  Array and string offset access syntax with curly braces is no longer supported in /home2/vivhjgte/public_html/cats/lib/CATSUtility.php on line 108
+[15-Jan-2025 18:05:38 America/Chicago] PHP Warning:  include_once(./vendor/autoload.php): Failed to open stream: No such file or directory in /home2/vivhjgte/public_html/cats/lib/TemplateUtility.php on line 38
+[15-Jan-2025 18:05:38 America/Chicago] PHP Warning:  include_once(): Failed opening './vendor/autoload.php' for inclusion (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home2/vivhjgte/public_html/cats/lib/TemplateUtility.php on line 38
+[15-Jan-2025 18:05:39 America/Chicago] PHP Deprecated:  Optional parameter $query declared before required parameter $column is implicitly treated as a required parameter in /home2/vivhjgte/public_html/cats/lib/DatabaseConnection.php on line 262
+[15-Jan-2025 18:05:39 America/Chicago] PHP Fatal error:  Array and string offset access syntax with curly braces is no longer supported in /home2/vivhjgte/public_html/cats/lib/CATSUtility.php on line 108
+[15-Jan-2025 18:12:18 America/Chicago] PHP Warning:  include_once(./vendor/autoload.php): Failed to open stream: No such file or directory in /home2/vivhjgte/public_html/cats/lib/TemplateUtility.php on line 38
+[15-Jan-2025 18:12:18 America/Chicago] PHP Warning:  include_once(): Failed opening './vendor/autoload.php' for inclusion (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home2/vivhjgte/public_html/cats/lib/TemplateUtility.php on line 38
+[15-Jan-2025 18:12:18 America/Chicago] PHP Deprecated:  Optional parameter $query declared before required parameter $column is implicitly treated as a required parameter in /home2/vivhjgte/public_html/cats/lib/DatabaseConnection.php on line 262
+[15-Jan-2025 18:12:18 America/Chicago] PHP Fatal error:  Array and string offset access syntax with curly braces is no longer supported in /home2/vivhjgte/public_html/cats/lib/CATSUtility.php on line 108
+[15-Jan-2025 18:36:08 America/Chicago] PHP Deprecated:  Optional parameter $query declared before required parameter $column is implicitly treated as a required parameter in /home2/vivhjgte/public_html/cats/lib/DatabaseConnection.php on line 262
+[15-Jan-2025 18:36:08 America/Chicago] PHP Fatal error:  Array and string offset access syntax with curly braces is no longer supported in /home2/vivhjgte/public_html/cats/lib/CATSUtility.php on line 108
+[16-Jan-2025 07:09:48 America/Chicago] PHP Fatal error:  Uncaught Error: Call to undefined function get_magic_quotes_runtime() in /home2/vivhjgte/public_html/cats/ajax.php:52
+Stack trace:
+#0 {main}
+  thrown in /home2/vivhjgte/public_html/cats/ajax.php on line 52
+[16-Jan-2025 07:13:53 America/Chicago] PHP Fatal error:  Uncaught Error: Call to undefined function get_magic_quotes_runtime() in /home2/vivhjgte/public_html/cats/lib/InstallationTests.php:185
+Stack trace:
+#0 /home2/vivhjgte/public_html/cats/lib/InstallationTests.php(82): InstallationTests::checkMagicQuotes()
+#1 /home2/vivhjgte/public_html/cats/modules/install/ajax/ui.php(85): InstallationTests::runInstallerTests()
+#2 /home2/vivhjgte/public_html/cats/ajax.php(113): include('/home2/vivhjgte...')
+#3 {main}
+  thrown in /home2/vivhjgte/public_html/cats/lib/InstallationTests.php on line 185
+[16-Jan-2025 13:15:36 America/Chicago] PHP Warning:  include_once(./vendor/autoload.php): Failed to open stream: No such file or directory in /home2/vivhjgte/public_html/cats/lib/TemplateUtility.php on line 38
+[16-Jan-2025 13:15:36 America/Chicago] PHP Warning:  include_once(): Failed opening './vendor/autoload.php' for inclusion (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home2/vivhjgte/public_html/cats/lib/TemplateUtility.php on line 38
+[16-Jan-2025 13:18:10 America/Chicago] PHP Warning:  include_once(./vendor/autoload.php): Failed to open stream: No such file or directory in /home2/vivhjgte/public_html/cats/lib/TemplateUtility.php on line 38
+[16-Jan-2025 13:18:10 America/Chicago] PHP Warning:  include_once(): Failed opening './vendor/autoload.php' for inclusion (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home2/vivhjgte/public_html/cats/lib/TemplateUtility.php on line 38

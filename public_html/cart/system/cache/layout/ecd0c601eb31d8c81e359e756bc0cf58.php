@@ -1,0 +1,1 @@
+<?php die('Restricted Access!'); ?>#AbanteCart#s:28:"blocks/html_block_footer.tpl";

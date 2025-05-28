@@ -1,0 +1,19 @@
+@media screen and (max-width: 960px) {
+    #mobnav-btn span.image-menu {
+        background: url("../images/menu.png") no-repeat;
+    }
+
+    .mobnav-subarrow, .mobnav-subarrow-levels {
+        background: url("../images/menu.png") no-repeat;
+    }
+
+    .switch-menu span.image-menu {
+        background: url("../images/menu_small.png") no-repeat;
+    }
+}
+
+@media screen and (min-width: 500px) {
+    .highlight-left-right {
+        background: url(../images/line_menu1.jpg) repeat-x scroll 0 50% rgba(0, 0, 0, 0);
+    }
+}

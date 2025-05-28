@@ -1,0 +1,15 @@
+<?php die('Restricted Access!'); ?>#AbanteCart#a:1:{i:1;a:12:{s:20:"block_description_id";s:2:"40";s:15:"custom_block_id";s:2:"26";s:11:"language_id";s:1:"1";s:13:"block_wrapper";s:1:"0";s:12:"block_framed";s:1:"0";s:4:"name";s:30:"Novator Footer link block main";s:5:"title";s:22:"Footer link block main";s:11:"description";s:22:"Footer link block main";s:7:"content";s:2340:"&lt;div class=&quot;footer-main-links row&quot;&gt;
+  &lt;div class=&quot;col-md-4&quot;&gt;
+  &lt;h3 class=&quot;h5 text-white text-start&quot;&gt;Product&lt;/h3&gt;
+  &lt;ul class=&quot;list-unstyled footer-link&quot;&gt;&lt;li&gt;&lt;a href=&quot;#&quot; target=&quot;_blank&quot;&gt;Smart&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;#&quot; target=&quot;_blank&quot;&gt;Habits&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;#&quot; target=&quot;_blank&quot;&gt;Tasks&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;#&quot; target=&quot;_blank&quot;&gt;Calendar Sync&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;#&quot; target=&quot;_blank&quot;&gt;Buffer Time&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;#&quot; target=&quot;_blank&quot;&gt;Use Cases&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;col-md-4&quot;&gt;
+  &lt;h3 class=&quot;h5 text-white text-start&quot;&gt;Product&lt;/h3&gt;
+  &lt;ul class=&quot;list-unstyled footer-link&quot;&gt;&lt;li&gt;&lt;a href=&quot;#&quot; target=&quot;_blank&quot;&gt;Smart&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;#&quot; target=&quot;_blank&quot;&gt;Habits&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;#&quot; target=&quot;_blank&quot;&gt;Tasks&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;#&quot; target=&quot;_blank&quot;&gt;Calendar Sync&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;#&quot; target=&quot;_blank&quot;&gt;Buffer Time&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;#&quot; target=&quot;_blank&quot;&gt;Use Cases&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;col-md-4&quot;&gt;
+  &lt;h3 class=&quot;h5 text-white text-start&quot;&gt;Product&lt;/h3&gt;
+  &lt;ul class=&quot;list-unstyled footer-link&quot;&gt;&lt;li&gt;&lt;a href=&quot;#&quot; target=&quot;_blank&quot;&gt;Smart&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;#&quot; target=&quot;_blank&quot;&gt;Habits&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;#&quot; target=&quot;_blank&quot;&gt;Tasks&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;#&quot; target=&quot;_blank&quot;&gt;Calendar Sync&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;#&quot; target=&quot;_blank&quot;&gt;Buffer Time&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;#&quot; target=&quot;_blank&quot;&gt;Use Cases&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+  &lt;/div&gt;
+  &lt;/div&gt;
+  ";s:10:"date_added";s:19:"2025-01-08 14:59:51";s:13:"date_modified";s:19:"2025-01-08 14:59:51";s:6:"status";s:1:"1";}}

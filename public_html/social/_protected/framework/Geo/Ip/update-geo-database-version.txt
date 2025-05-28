@@ -1,0 +1,1 @@
+GeoLite2 City database is updated on the first Tuesday of each month by MaxMind.

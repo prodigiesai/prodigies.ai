@@ -1,0 +1,43 @@
+{
+  "expo": {
+    "name": "Prodigies",
+    "slug": "Prodigies",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./app/assets/icon.png",
+    "userInterfaceStyle": "automatic",
+    "scheme": "prodigies",
+    "splash": {
+      "image": "./app/assets/splash.png",
+      "resizeMode": "cover",
+      "backgroundColor": "#e6e6fa"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "ai.prodigies.app"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./app/assets/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "package": "ai.prodigies.app"
+    },
+    "web": {
+      "favicon": "./app/assets/favicon.png"
+    },
+    "experiments": {
+      "tsconfigPaths": true
+    },
+    "plugins": [
+      "expo-router"
+      // ["react-native-fbsdk-next", {
+      //   "appID": "your-facebook-app-id",
+      //   "displayName": "Your App Display Name"
+      // }]
+    ]
+  }
+}

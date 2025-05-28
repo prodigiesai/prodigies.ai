@@ -1,0 +1,130 @@
+body {
+    /*background:url(../images/body.jpg) 0 0 repeat;*/
+}
+
+.body_background {
+    /*background:url(../images/body_header.jpg) 0 0 repeat;*/
+}
+
+.menu .header_menu li {
+    background: url(../images/line_menu.jpg) no-repeat 0 7px;
+}
+
+.first_line, .last_line {
+    background: url(../images/line_menu1.jpg) repeat;
+}
+
+.forma {
+    background: url(../images/block.jpg) repeat;
+}
+
+.last_line2_left {
+    background: url(../images/line_menu1.jpg) repeat;
+}
+
+.last_line2_right {
+    background: url(../images/line_menu1.jpg) repeat;
+}
+
+.welcome .title_line {
+    background: url(../images/line_menu1.jpg) repeat;
+}
+
+.entries .title_line {
+    background: url(../images/line_menu1.jpg) repeat;
+}
+
+#footer-links {
+    background: url(../images/footer.jpg) repeat;
+}
+
+.block_item ul .li1 {
+    background: url(../images/img19.jpg) no-repeat;
+}
+
+.block_item ul .li2 {
+    background: url(../images/img18.jpg) no-repeat 0px;
+}
+
+.block_item ul .li3 {
+    background: url(../images/img17.jpg) no-repeat;
+}
+
+#search-form {
+    background: url(../images/block.jpg);
+}
+
+div.sorting a.asc {
+    background: url("../images/up.gif") no-repeat 98% 9px;
+}
+
+div.sorting a.desc {
+    background: url("../images/down.gif") no-repeat 98% 9px;
+}
+
+#loading-blocks {
+    background: rgba(0, 0, 0, 0) url("../images/ajax-loader-blocks.gif") no-repeat scroll center center;
+}
+
+div.logo a {
+    background: url(../images/pages/logo-open-ore-bg.png) no-repeat 70px top;
+}
+
+.new_select {
+    background: url(../images/select_arrow.png) no-repeat right;
+}
+
+.forma input[type="text"] {
+    /*background: url(../images/input.png) no-repeat;*/
+}
+
+.forma select {
+    /*background-image: url(../images/input.png);
+    background-color: transparent;
+    background-color:rgba(0,0,0,0);
+    background-position: 0px 50%;*/
+}
+
+.like {
+    background: url(../images/like.png) no-repeat;
+}
+
+.filtr_background {
+    background: url(../images/filtr.png) repeat-x;
+}
+
+.hide_filtr {
+    background: #3278b4 url(../images/arrow_filter.png) 0 -5px no-repeat;
+}
+
+.hide_filtr.collapsed {
+    background: #3278b4 url(../images/arrow_filter.png) 7px -5px no-repeat;
+}
+
+.show_filtr {
+    background: url(../images/arrow_filter2.png) 0 -6px no-repeat;
+}
+
+.filtr_background2 {
+    background: url(../images/filtr2.png) repeat-x;
+}
+
+.search-term .search-icon {
+    background: url("../images/search.png") no-repeat scroll 0 0px rgba(0, 0, 0, 0);
+}
+
+.jssorb05 div, .jssorb05 div:hover, .jssorb05 .av {
+    background: url('../images/jssor-slider/b05.png') no-repeat;
+}
+
+.flexslider-loading-image {
+    background: url('../images/ajax-loader-blocks.gif') no-repeat center center;
+}
+
+.box_message .delete_message {
+    background: url('../images/delete.png') center center no-repeat;
+}
+
+.jssora22l, .jssora22r {
+    background-image: url('../images/jssor-slider/a22.png');
+}

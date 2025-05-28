@@ -1,0 +1,6 @@
+[pl_row pagelayer-id="53fcctg13e846scb"  stretch="auto" col_gap="10" width_content="auto" row_height="default" column_pos="default" content_pos="default" overlay_hover_delay="400" row_shape_top_color="#fff" row_shape_top_width="100" row_shape_top_height="100" row_shape_bottom_color="#fff" row_shape_bottom_width="100" row_shape_bottom_height="100" ele_bg_hover_delay="400" ele_bg_type="color" ele_bg_color="#666666ff" ele_padding="8px,0px,8px,0px"]
+[pl_col pagelayer-id="zgxtcdjdl097lcq0"  widget_space="15" overlay_hover_delay="400" ele_bg_hover_delay="400"]
+[pl_wp_menu pagelayer-id="ot00oepyylw0cc7y"  nav_list="3" align="center" layout="horizontal" pointer="background" m_animation="slide" list_style="none" submenu_ind="caret-down" menu_bg_color_hover="#d0af51ff" menu_bg_color_active="#d0af51ff" horizontal_padding="40" vertical_padding="12" submenu_color="#ffffff" submenu_bg_color="#3e8ef7ff" submenu_horizontal_padding="10" submenu_vertical_padding="10" submenu_left_margin="10" menu_toggle_align="center" menu_toggle_bg_color="#3e8ef750" menu_toggle_size="30" close_hover_delay="600" ele_bg_hover_delay="400" submenu_position="left" menu_color="#666666ff" menu_bg_color="#ffffffff" menu_typo=",,,300,,,Solid,,,," menu_color_hover="#666666ff" menu_color_active="#ffffffff"]
+[/pl_wp_menu]
+[/pl_col]
+[/pl_row]

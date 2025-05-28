@@ -1,0 +1,220 @@
+### For Internal Use (Tools to help with your development, infrastructure, and security):
+
+- **Development/DevOps Tools:**
+  - Express
+  - Spring
+  - JFrog (Artifact management)
+  - Helm (Kubernetes management)
+  - GridAI (ML workflow orchestration)
+
+- **Security Tools:**
+  - KeyCloack (Authentication/SSO)
+  - Security Onion (Monitoring, threat detection)
+  - Ossec (Host-based Intrusion Detection System)
+
+- **Databases:**
+  - MariaDB
+  - MongoDB
+  - MSSQL
+  - PostgreSQL
+
+- **Open Source Monitoring & Analytics:**
+  - Pentaho (Business analytics)
+
+
+### For Selling Your Services (Apps you could use to provide services to clients):
+
+- **Business & Enterprise Software:**
+  - Alfresco (Document management)
+  - Apache OFBiz (ERP suite)
+  - CiviCRM (CRM for nonprofits)
+  - ERPNext (ERP for businesses)
+  - ERPNext Real Estate (Real estate-specific ERP)
+  - Flex (Business operations)
+  - SuiteCRM (Customer relationship management)
+  - Odoo (ERP and business applications)
+  - OpenCATS (Recruitment)
+  - OpenEMR (Electronic Medical Records)
+  - OpenHR (HR management)
+  - OpenHospital (Hospital management)
+  - OpenProject (Project management)
+  - Zammad (Helpdesk)
+
+- **Finance/Accounting:**
+  - Invoice Ninja (Invoice and billing)
+  - Mifos X (Financial inclusion platform)
+  - Kill Bill (Subscription billing)
+  - Snipe-IT (Asset management)
+
+- **Web & E-Commerce:**
+  - WordPress (Content management)
+  - Ghost (Blogging platform)
+  - Moodle (Learning management system)
+  - OpenHotel (Hotel management)
+  - WooCommerce (E-commerce platform)
+  - Saleor (E-commerce)
+
+- **Real Estate:**
+  - OpenProperty (Property management)
+  - HOA-Manager (Internal business management for communities)
+
+
+- **Healthcare Software:**
+  - GNU Health (Healthcare management)
+  - OpenHospital (Healthcare systems)
+
+- **Telecommunications & Networking:**
+  - Asterisk (Telecom platform)
+  - Traccar (GPS tracking system)
+
+- **Data Science/AI/ML:**
+  - AgML (Agricultural data platform)
+  - Freqtrade (Algorithmic trading)
+  - H2O.ai (AI and machine learning)
+  - MindTorch AI (AI platform)
+
+- **Miscellaneous/Service Platforms:**
+  - Netflix (Entertainment, could be part of testing streaming-related projects)
+  - Shotstack (Video editing/rendering)
+  - Post Affiliate Pro (Affiliate marketing software)
+
+
+- Others
+  - OpenBB Terminal: Open-source financial data analysis platform for investment research (Finance).
+  - ERAM: Role-based access management tool for enforcing access control (Enterprise Security).
+  - Koha: Integrated library management system for cataloging and circulation (Library/Education).
+  - Mautic: Marketing automation platform for managing campaigns and lead generation (Marketing).
+  - OpenTCS: Framework for controlling automated guided vehicles in warehouses (Logistics/Industrial Automation).
+  - OpenUtility: Tool for managing decentralized energy systems and smart grids (Energy/Utilities).
+  - Scrapy: Web scraping framework for extracting data from websites (Data Science/Research).
+
+
+Here's a breakdown of the apps grouped by **programming language and technology stacks** (e.g., PHP running on NGINX, Java-based apps, etc.). This will help you determine how many common services you need to create besides the databases.
+
+---
+
+### **PHP-Based Apps (Typically running on NGINX/Apache)**
+
+- **CiviCRM** (CRM for nonprofits)
+  - Typical Setup: PHP + NGINX/Apache + MySQL/MariaDB
+  
+- **SuiteCRM** (Customer relationship management)
+  - Typical Setup: PHP + NGINX/Apache + MySQL/MariaDB
+  
+- **OpenCATS** (Recruitment)
+  - Typical Setup: PHP + NGINX/Apache + MySQL/MariaDB
+  
+- **OpenEMR** (Electronic Medical Records)
+  - Typical Setup: PHP + NGINX/Apache + MySQL/MariaDB
+  
+- **OpenHR** (HR management)
+  - Typical Setup: PHP + NGINX/Apache + MySQL/MariaDB
+  
+- **OpenHospital** (Hospital management)
+  - Typical Setup: PHP + NGINX/Apache + MySQL/MariaDB
+  
+- **Invoice Ninja** (Invoice and billing)
+  - Typical Setup: PHP + NGINX/Apache + MySQL/MariaDB
+  
+- **Snipe-IT** (Asset management)
+  - Typical Setup: PHP + NGINX/Apache + MySQL/MariaDB
+  
+- **WordPress** (Content management)
+  - Typical Setup: PHP + NGINX/Apache + MySQL/MariaDB
+  
+- **WooCommerce** (E-commerce platform) (WordPress Plugin)
+  - Typical Setup: PHP + NGINX/Apache + MySQL/MariaDB
+  
+- **Moodle** (Learning management system)
+  - Typical Setup: PHP + NGINX/Apache + MySQL/MariaDB
+  
+- **OpenHotel** (Hotel management)
+  - Typical Setup: PHP + NGINX/Apache + MySQL/MariaDB
+  
+- **OpenProperty** (Property management)
+  - Typical Setup: PHP + NGINX/Apache + MySQL/MariaDB
+  
+- **HOA-Manager** (Internal business management for communities)
+  - Typical Setup: PHP + NGINX/Apache + MySQL/MariaDB
+
+---
+
+### **Java-Based Apps (Typically running on Tomcat/Jetty)**
+
+- **Alfresco** (Document management)
+  - Typical Setup: Java + Tomcat + MySQL/PostgreSQL
+  
+- **Apache OFBiz** (ERP suite)
+  - Typical Setup: Java + Tomcat + MySQL/MariaDB
+  
+- **Kill Bill** (Subscription billing)
+  - Typical Setup: Java + Jetty + MySQL/PostgreSQL
+  
+- **Traccar** (GPS tracking system)
+  - Typical Setup: Java + MySQL/PostgreSQL
+  
+- **OpenHospital** (Hospital management)
+  - Typical Setup: Java + Tomcat + MySQL/MariaDB
+
+---
+
+### **Python-Based Apps (Typically running on Gunicorn/UWSGI)**
+
+- **ERPNext** (ERP for businesses)
+  - Typical Setup: Python + Frappe framework + Gunicorn/UWSGI + MariaDB/PostgreSQL
+  
+- **ERPNext Real Estate** (Real estate-specific ERP)
+  - Typical Setup: Python + Frappe framework + Gunicorn/UWSGI + MariaDB/PostgreSQL
+  
+- **Odoo** (ERP and business applications)
+  - Typical Setup: Python + Gunicorn + PostgreSQL
+  
+- **GNU Health** (Healthcare management)
+  - Typical Setup: Python + Gunicorn/UWSGI + PostgreSQL
+  
+- **AgML** (Agricultural data platform)
+  - Typical Setup: Python + PostgreSQL
+  
+- **Freqtrade** (Algorithmic trading)
+  - Typical Setup: Python + SQLite/PostgreSQL
+
+---
+
+### **Ruby on Rails-Based Apps (Typically running on Puma/Passenger)**
+
+- **OpenProject** (Project management)
+  - Typical Setup: Ruby on Rails + Puma/Passenger + PostgreSQL
+  
+- **Zammad** (Helpdesk)
+  - Typical Setup: Ruby on Rails + Puma/Passenger + PostgreSQL
+
+---
+
+### **Node.js-Based Apps**
+
+- **Ghost** (Blogging platform)
+  - Typical Setup: Node.js + SQLite/PostgreSQL
+  
+- **Shotstack** (Video editing/rendering)
+  - Typical Setup: Node.js + NoSQL backend like DynamoDB or MongoDB
+  
+---
+
+### **Summary of Common Services:**
+
+1. **PHP with NGINX/Apache** – This is the most common setup. You'll likely need at least one **NGINX** or **Apache** instance to run the PHP-based apps.
+   - Apps: **13 apps**
+   
+2. **Java (Tomcat/Jetty)** – You'll need a **Tomcat** or **Jetty** instance for the Java-based apps.
+   - Apps: **5 apps**
+
+3. **Python (Gunicorn/UWSGI)** – For Python-based apps, setting up a **Gunicorn/UWSGI** instance would be necessary.
+   - Apps: **6 apps**
+
+4. **Ruby on Rails (Puma/Passenger)** – Ruby on Rails apps typically run on **Puma** or **Passenger**, so you'd need an instance for these.
+   - Apps: **2 apps**
+
+5. **Node.js** – For **Ghost** and similar apps, you'll need at least one **Node.js** runtime.
+   - Apps: **2 apps**
+
+By setting up **5 common services** (PHP/NGINX, Java/Tomcat, Python/Gunicorn, Ruby/Puma, Node.js), you can cover the majority of the applications. This will ensure streamlined management and avoid redundant services.

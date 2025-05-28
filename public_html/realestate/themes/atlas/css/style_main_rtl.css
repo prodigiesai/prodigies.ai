@@ -1,0 +1,25 @@
+div.logo a {
+    background: url(../images/pages/logo-open-ore-bg.png) no-repeat 0px top;
+}
+
+.menu .header_menu li {
+    background: url(../images/line_menu.jpg) no-repeat right 7px;
+}
+
+.currency {
+    padding-right: 5px;
+}
+
+.block_item ul .li1, .block_item ul .li2, .block_item ul .li3 {
+    background-position: right center;
+}
+
+.user-rating-comment {
+    direction: ltr;
+    right: 0;
+    float: right;
+}
+
+.sf-menu {
+    margin-bottom: 0 !important;
+}
