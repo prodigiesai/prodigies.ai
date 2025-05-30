@@ -277,35 +277,247 @@ CREATE INDEX IDX_PatientPharmacies_PharmacyID ON PatientPharmacies(PharmacyID);
 -- PROVIDERS TABLE (USES CENTRALIZED ENTITIES)
 -- =============================================
 -- =============================================
+-- TABLE: Providers
+-- Healthcare provider master data (uses centralized entities)
+-- =============================================
+CREATE TABLE Providers (
+    ProviderID INT PRIMARY KEY IDENTITY(1,1), -- Unique provider identifier
+    OrgID INT NOT NULL, -- Organization (FK to Organizations)
+    EntityID INT NOT NULL, -- Reference to Entities(EntityID) for provider entity info
+    Specialty NVARCHAR(100), -- Medical specialty [General Practice, Pediatrics, etc.]
+    NPI NVARCHAR(50), -- National Provider Identifier
+    CreatedAt DATETIME DEFAULT GETDATE(), -- Record creation timestamp
+    CreatedBy NVARCHAR(100), -- User who created the record
+    ModifiedAt DATETIME NULL, -- Last modification timestamp
+    ModifiedBy NVARCHAR(100) NULL, -- User who last modified the record
+    IsDeleted BIT DEFAULT 0, -- Logical deletion flag
+    CONSTRAINT FK_Providers_OrgID FOREIGN KEY (OrgID) REFERENCES Organizations(OrgID), -- Organization reference
+    CONSTRAINT FK_Providers_EntityID FOREIGN KEY (EntityID) REFERENCES Entities(EntityID) -- Provider entity info
+);
 
+-- Indices for Providers
+CREATE INDEX IDX_Providers_OrgID ON Providers(OrgID);
+CREATE INDEX IDX_Providers_Specialty ON Providers(Specialty);
+CREATE INDEX IDX_Providers_EntityID ON Providers(EntityID);
+
+-- =============================================
+-- TABLE: Appointments
+-- Patient appointment scheduling and tracking
+-- =============================================
+CREATE TABLE Appointments (
+    AppointmentID INT PRIMARY KEY IDENTITY(1,1), -- Unique appointment identifier
+    OrgID INT NOT NULL, -- Organization (FK to Organizations)
+    PatientID INT, -- Patient (FK to Patients)
+    ProviderID INT, -- Provider (FK to Providers)
+    ScheduledAt DATETIME, -- Date and time of appointment
+    Reason NVARCHAR(500), -- Reason for visit/appointment
+    Status NVARCHAR(50), -- Appointment status [Scheduled, Completed, Canceled, No-Show]
+    CreatedAt DATETIME DEFAULT GETDATE(), -- Record creation timestamp
+    CreatedBy NVARCHAR(100), -- User who created the record
+    ModifiedAt DATETIME NULL, -- Last modification timestamp
+    ModifiedBy NVARCHAR(100) NULL, -- User who last modified the record
+    IsDeleted BIT DEFAULT 0, -- Logical deletion flag
+    CONSTRAINT FK_Appointments_OrgID FOREIGN KEY (OrgID) REFERENCES Organizations(OrgID), -- Organization reference
+    CONSTRAINT FK_Appointments_PatientID FOREIGN KEY (PatientID) REFERENCES Patients(PatientID), -- Patient reference
+    CONSTRAINT FK_Appointments_ProviderID FOREIGN KEY (ProviderID) REFERENCES Providers(ProviderID) -- Provider reference
+);
+
+-- Indices for Appointments
+CREATE INDEX IDX_Appointments_OrgID ON Appointments(OrgID);
+CREATE INDEX IDX_Appointments_PatientID ON Appointments(PatientID);
+CREATE INDEX IDX_Appointments_ProviderID ON Appointments(ProviderID);
+CREATE INDEX IDX_Appointments_ScheduledAt ON Appointments(ScheduledAt);
+
+-- =============================================
+-- TABLE: Prescriptions
+-- Medication prescriptions for patients
+-- =============================================
+CREATE TABLE Prescriptions (
+    PrescriptionID INT PRIMARY KEY IDENTITY(1,1), -- Unique prescription identifier
+    OrgID INT NOT NULL, -- Organization (FK to Organizations)
+    PatientID INT, -- Patient (FK to Patients)
+    ProviderID INT, -- Provider (FK to Providers)
+    Medication NVARCHAR(255), -- Medication name
+    Dosage NVARCHAR(100), -- Dosage amount (e.g., 10mg)
+    Frequency NVARCHAR(100), -- Frequency (e.g., Twice daily)
+    StartDate DATE, -- Start date of prescription
+    EndDate DATE, -- End date or expiration
+    Notes NVARCHAR(1000), -- Additional instructions
+    CreatedAt DATETIME DEFAULT GETDATE(), -- Record creation timestamp
+    CreatedBy NVARCHAR(100), -- User who created the record
+    ModifiedAt DATETIME NULL, -- Last modification timestamp
+    ModifiedBy NVARCHAR(100) NULL, -- User who last modified the record
+    IsDeleted BIT DEFAULT 0, -- Logical deletion flag
+    CONSTRAINT FK_Prescriptions_OrgID FOREIGN KEY (OrgID) REFERENCES Organizations(OrgID), -- Organization reference
+    CONSTRAINT FK_Prescriptions_PatientID FOREIGN KEY (PatientID) REFERENCES Patients(PatientID), -- Patient reference
+    CONSTRAINT FK_Prescriptions_ProviderID FOREIGN KEY (ProviderID) REFERENCES Providers(ProviderID) -- Provider reference
+);
+
+-- Indices for Prescriptions
+CREATE INDEX IDX_Prescriptions_OrgID ON Prescriptions(OrgID);
+CREATE INDEX IDX_Prescriptions_PatientID ON Prescriptions(PatientID);
+CREATE INDEX IDX_Prescriptions_ProviderID ON Prescriptions(ProviderID);
+
+-- =============================================
+-- TABLE: MedicalRecords
+-- Patient visit medical records, diagnoses, and treatment
+-- =============================================
+CREATE TABLE MedicalRecords (
+    RecordID INT PRIMARY KEY IDENTITY(1,1), -- Unique medical record identifier
+    OrgID INT NOT NULL, -- Organization (FK to Organizations)
+    PatientID INT, -- Patient (FK to Patients)
+    VisitDate DATETIME, -- Date/time of medical visit
+    Summary NVARCHAR(MAX), -- Visit summary
+    Diagnosis NVARCHAR(255), -- Diagnosis code/description [ICD-10]
+    TreatmentPlan NVARCHAR(MAX), -- Plan for treatment (medications, procedures, referrals)
+    Notes NVARCHAR(MAX), -- Additional notes
+    CreatedAt DATETIME DEFAULT GETDATE(), -- Record creation timestamp
+    CreatedBy NVARCHAR(100), -- User who created the record
+    ModifiedAt DATETIME NULL, -- Last modification timestamp
+    ModifiedBy NVARCHAR(100) NULL, -- User who last modified the record
+    IsDeleted BIT DEFAULT 0, -- Logical deletion flag
+    CONSTRAINT FK_MedicalRecords_OrgID FOREIGN KEY (OrgID) REFERENCES Organizations(OrgID), -- Organization reference
+    CONSTRAINT FK_MedicalRecords_PatientID FOREIGN KEY (PatientID) REFERENCES Patients(PatientID) -- Patient reference
+);
+
+-- Indices for MedicalRecords
+CREATE INDEX IDX_MedicalRecords_OrgID ON MedicalRecords(OrgID);
+CREATE INDEX IDX_MedicalRecords_PatientID ON MedicalRecords(PatientID);
+CREATE INDEX IDX_MedicalRecords_VisitDate ON MedicalRecords(VisitDate);
+
+-- =============================================
+-- TABLE: LabResults
+-- Stores lab/imaging results for patients
+-- =============================================
+CREATE TABLE LabResults (
+    LabResultID INT PRIMARY KEY IDENTITY(1,1), -- Unique lab result identifier
+    OrgID INT NOT NULL, -- Organization (FK to Organizations)
+    PatientID INT, -- Patient (FK to Patients)
+    LabType NVARCHAR(255), -- Type of lab test [Blood Test, X-Ray, etc.]
+    Result NVARCHAR(MAX), -- Test result value(s)
+    ResultDate DATE, -- Date test result was obtained
+    Notes NVARCHAR(MAX), -- Additional notes
+    CreatedAt DATETIME DEFAULT GETDATE(), -- Record creation timestamp
+    CreatedBy NVARCHAR(100), -- User who created the record
+    ModifiedAt DATETIME NULL, -- Last modification timestamp
+    ModifiedBy NVARCHAR(100) NULL, -- User who last modified the record
+    IsDeleted BIT DEFAULT 0, -- Logical deletion flag
+    CONSTRAINT FK_LabResults_OrgID FOREIGN KEY (OrgID) REFERENCES Organizations(OrgID), -- Organization reference
+    CONSTRAINT FK_LabResults_PatientID FOREIGN KEY (PatientID) REFERENCES Patients(PatientID) -- Patient reference
+);
+
+-- Indices for LabResults
+CREATE INDEX IDX_LabResults_OrgID ON LabResults(OrgID);
+CREATE INDEX IDX_LabResults_PatientID ON LabResults(PatientID);
+CREATE INDEX IDX_LabResults_ResultDate ON LabResults(ResultDate);
 
 
 
 -- =============================================
+-- TABLE: Employees
+-- Employee master records
+-- =============================================
+CREATE TABLE Employees (
+    EmployeeID INT PRIMARY KEY IDENTITY(1,1), -- Unique employee identifier
+    OrgID INT NOT NULL, -- Organization (FK to Organizations)
+    FirstName NVARCHAR(100), -- Employee first name
+    LastName NVARCHAR(100), -- Employee last name
+    Role NVARCHAR(100), -- Role in the organization [Admin, Nurse, Physician, etc.]
+    Department NVARCHAR(100), -- Department [HR, Finance, Clinical, etc.]
+    EntityID INT, -- FK to Entities table
+    HireDate DATE, -- Date of hire
+    Status NVARCHAR(50), -- [Active, On Leave, Terminated]
+    CreatedAt DATETIME DEFAULT GETDATE(), -- Record creation timestamp
+    CreatedBy NVARCHAR(100), -- User who created the record
+    ModifiedAt DATETIME NULL, -- Last modification timestamp
+    ModifiedBy NVARCHAR(100) NULL, -- User who last modified the record
+    IsDeleted BIT DEFAULT 0, -- Logical deletion flag
+    CONSTRAINT FK_Employees_OrgID FOREIGN KEY (OrgID) REFERENCES Organizations(OrgID) -- Organization reference
+);
 
+CREATE INDEX IDX_Employees_OrgID ON Employees(OrgID);
+CREATE INDEX IDX_Employees_LastName ON Employees(LastName);
 
 -- =============================================
-
+-- TABLE: EmployeeDetails
+-- Detailed employment, payroll, and HR data per employee
+-- =============================================
+CREATE TABLE EmployeeDetails (
+    EmployeeID INT PRIMARY KEY, -- Employee (FK to Employees)
+    OrgID INT NOT NULL, -- Organization (FK to Organizations)
+    HireDate DATE, -- Hire date
+    TerminationDate DATE, -- Termination date (if applicable)
+    JobTitle NVARCHAR(100), -- Official job title
+    Department NVARCHAR(100), -- Department name
+    ManagerID INT, -- Manager (FK to Employees)
+    Salary DECIMAL(12,2), -- Annual salary (USD)
+    PayType NVARCHAR(50), -- [Hourly, Salary]
+    Benefits NVARCHAR(MAX), -- Benefits description
+    InsuranceProvider NVARCHAR(255), -- Health insurance provider
+    InsurancePlan NVARCHAR(100), -- Plan name
+    PayrollDeductions NVARCHAR(MAX), -- Deductions/withholdings
+    CreatedAt DATETIME DEFAULT GETDATE(), -- Record creation timestamp
+    CreatedBy NVARCHAR(100), -- User who created the record
+    ModifiedAt DATETIME NULL, -- Last modification timestamp
+    ModifiedBy NVARCHAR(100) NULL, -- User who last modified the record
+    IsDeleted BIT DEFAULT 0, -- Logical deletion flag
+    CONSTRAINT FK_EmployeeDetails_EmployeeID FOREIGN KEY (EmployeeID) REFERENCES Employees(EmployeeID), -- Employee reference
+    CONSTRAINT FK_EmployeeDetails_ManagerID FOREIGN KEY (ManagerID) REFERENCES Employees(EmployeeID), -- Manager reference
+    CONSTRAINT FK_EmployeeDetails_OrgID FOREIGN KEY (OrgID) REFERENCES Organizations(OrgID) -- Organization reference
+);
+CREATE INDEX IDX_EmployeeDetails_EmployeeID ON EmployeeDetails(EmployeeID);
+CREATE INDEX IDX_EmployeeDetails_ManagerID ON EmployeeDetails(ManagerID);
+CREATE INDEX IDX_EmployeeDetails_OrgID ON EmployeeDetails(OrgID);
 
 -- =============================================
-
-
-
-
+-- TABLE: EmployeeEducation
+-- Employee education and credentials
 -- =============================================
-
-
--- =============================================
-
-
--- =============================================
-
+CREATE TABLE EmployeeEducation (
+    EducationID INT PRIMARY KEY IDENTITY(1,1), -- Unique education record
+    EmployeeID INT, -- Employee (FK to Employees)
+    OrgID INT NOT NULL, -- Organization (FK to Organizations)
+    Institution NVARCHAR(255), -- Name of educational institution
+    Degree NVARCHAR(255), -- Degree/certification
+    Field NVARCHAR(255), -- Field of study
+    StartYear INT, -- Start year (YYYY)
+    EndYear INT, -- End year (YYYY)
+    CreatedAt DATETIME DEFAULT GETDATE(), -- Record creation timestamp
+    CreatedBy NVARCHAR(100), -- User who created the record
+    ModifiedAt DATETIME NULL, -- Last modification timestamp
+    ModifiedBy NVARCHAR(100) NULL, -- User who last modified the record
+    IsDeleted BIT DEFAULT 0, -- Logical deletion flag
+    CONSTRAINT FK_EmployeeEducation_EmployeeID FOREIGN KEY (EmployeeID) REFERENCES Employees(EmployeeID), -- Employee reference
+    CONSTRAINT FK_EmployeeEducation_OrgID FOREIGN KEY (OrgID) REFERENCES Organizations(OrgID) -- Organization reference
+);
+CREATE INDEX IDX_EmployeeEducation_EmployeeID ON EmployeeEducation(EmployeeID);
+CREATE INDEX IDX_EmployeeEducation_OrgID ON EmployeeEducation(OrgID);
 
 -- =============================================
 -- EMPLOYEE REFERENCES TABLE (USES CENTRALIZED ENTITIES)
 -- =============================================
 -- =============================================
-
+-- TABLE: EmployeeReferences
+-- References for employee background checks (uses centralized entities)
+-- =============================================
+CREATE TABLE EmployeeReferences (
+    ReferenceID INT PRIMARY KEY IDENTITY(1,1), -- Unique reference identifier
+    EmployeeID INT, -- Employee (FK to Employees)
+    OrgID INT NOT NULL, -- Organization (FK to Organizations)
+    EntityID INT NOT NULL, -- Reference to Entities(EntityID) for reference entity info
+    Relationship NVARCHAR(100), -- Relationship to employee
+    CreatedAt DATETIME DEFAULT GETDATE(), -- Record creation timestamp
+    CreatedBy NVARCHAR(100), -- User who created the record
+    ModifiedAt DATETIME NULL, -- Last modification timestamp
+    ModifiedBy NVARCHAR(100) NULL, -- User who last modified the record
+    IsDeleted BIT DEFAULT 0, -- Logical deletion flag
+    CONSTRAINT FK_EmployeeReferences_EmployeeID FOREIGN KEY (EmployeeID) REFERENCES Employees(EmployeeID), -- Employee reference
+    CONSTRAINT FK_EmployeeReferences_OrgID FOREIGN KEY (OrgID) REFERENCES Organizations(OrgID), -- Organization reference
+    CONSTRAINT FK_EmployeeReferences_EntityID FOREIGN KEY (EntityID) REFERENCES Entities(EntityID) -- Reference entity info
+);
+CREATE INDEX IDX_EmployeeReferences_EmployeeID ON EmployeeReferences(EmployeeID);
+CREATE INDEX IDX_EmployeeReferences_OrgID ON EmployeeReferences(OrgID);
+CREATE INDEX IDX_EmployeeReferences_EntityID ON EmployeeReferences(EntityID);
 
 -- =============================================
 -- TABLE: EmployeeHistory
